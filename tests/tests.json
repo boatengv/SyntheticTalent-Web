@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Home page shows the brand, services and roadmap",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "hero content",
+      "services section",
+      "roadmap section",
+      "platform list"
+    ],
+    "description": "Verifies the page presents Synthetic Talent with its three services and four roadmap stages.",
+    "steps": ["Open the home page", "Scroll to the Roadmap section"],
+    "expected": "The Synthetic Talent name, TikTok, YouTube and Instagram, the three service cards (AI influencer management, Content management, Creator management tool) and the Now, Next, Then and Long term roadmap stages are visible."
+  },
+  {
+    "name": "Navigation and footer links reach the team, privacy and terms",
+    "viewport": "desktop",
+    "covers": [
+      "header navigation",
+      "team section",
+      "privacy policy section",
+      "terms of use section"
+    ],
+    "description": "Verifies the header link reaches the team list and the footer links reach the legal sections.",
+    "steps": [
+      "Click Team in the header",
+      "Click Privacy in the footer",
+      "Click Terms in the footer"
+    ],
+    "expected": "The Team section shows Victor Boateng as Founder, then the Privacy policy section is shown, then the Terms of use section is shown."
+  },
+  {
+    "name": "Page reads cleanly on a phone",
+    "viewport": "mobile",
+    "covers": ["mobile layout", "stacked cards", "stacked roadmap"],
+    "description": "Verifies the layout stacks on a small screen without sideways scrolling.",
+    "steps": [
+      "Open the home page",
+      "Scroll through the What we do and Roadmap sections"
+    ],
+    "expected": "The service cards are stacked in one column, the roadmap stages are readable, and the page has no horizontal scroll."
+  }
+]
