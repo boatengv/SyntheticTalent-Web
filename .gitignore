@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.DS_Store
+# Raw Higgsfield source renders (large); the encoded, web-ready copies live in public/media
+refs/kit/

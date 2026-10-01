@@ -11,192 +11,553 @@
       name="description"
       content="Synthetic Talent manages AI influencers across TikTok, YouTube and Instagram, and is building tools and services for the AI creator economy."
     />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0F0F12" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F3F4F2" media="(prefers-color-scheme: light)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Synthetic Talent" />
+    <meta
+      property="og:description"
+      content="Virtual creators, managed like real talent."
+    />
+    <meta
+      property="og:image"
+      content="https://synthetic-talent-98oer8.v2.appdeploy.ai/media/og.jpg"
+    />
+    <meta property="og:url" content="https://synthetic-talent-98oer8.v2.appdeploy.ai/" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317151f'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%23e0306f'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%2334D399'/%3E%3Crect x='4.5' y='5' width='2.2' height='14' rx='1.1' fill='%230F0F12'/%3E%3Crect x='9' y='5' width='10' height='14' rx='2.4' fill='none' stroke='%230F0F12' stroke-width='2'/%3E%3C/svg%3E"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Figtree:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     />
+    <link rel="preload" as="image" href="media/film/studio-poster.jpg" />
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body>
-    <div id="app">
-      <header class="bar">
-        <a class="wordmark" href="#top" aria-label="Synthetic Talent home"
-          >Synthetic<span>Talent</span></a
-        >
-        <nav class="nav" aria-label="Sections">
-          <a href="#services">What we do</a>
-          <a href="#roadmap">Roadmap</a>
-          <a href="#team">Team</a>
-        </nav>
-      </header>
+    <a class="skip" href="#roster">Skip to content</a>
 
-      <main id="top">
-        <section class="hero">
-          <span class="pill"><i aria-hidden="true"></i>Launching soon</span>
-          <h1>Virtual creators, managed like real talent.</h1>
-          <p class="lede">
-            Synthetic Talent builds and manages AI influencers across TikTok,
-            YouTube and Instagram, and is building the tools and services to run
-            them at scale.
+    <svg class="sprite" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="ig-grad" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stop-color="#FEDA75" />
+          <stop offset="0.35" stop-color="#FA7E1E" />
+          <stop offset="0.6" stop-color="#D62976" />
+          <stop offset="0.8" stop-color="#962FBF" />
+          <stop offset="1" stop-color="#4F5BD5" />
+        </linearGradient>
+        <path id="tt-path" d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+      </defs>
+      <symbol id="o-tt" viewBox="0 0 24 24"><use href="#tt-path" fill="none" stroke="currentColor" stroke-width="1.4" transform="translate(2 2) scale(0.833)" /></symbol>
+      <symbol id="o-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" /></symbol>
+      <symbol id="o-yt" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.6" /><path d="M10.2 9.3v5.4l4.6-2.7z" fill="currentColor" /></symbol>
+      <symbol id="o-tag" viewBox="0 0 24 24"><path d="M3.5 12.6V4.5a1 1 0 0 1 1-1h8.1l8 8a1.5 1.5 0 0 1 0 2.1l-6 6a1.5 1.5 0 0 1-2.1 0z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /><circle cx="8.3" cy="8.3" r="1.5" fill="currentColor" /></symbol>
+      <symbol id="c-yt" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="4.5" fill="#FF0033" /><path d="M9.8 8.6v6.8l5.9-3.4z" fill="#fff" /></symbol>
+      <symbol id="c-tt" viewBox="0 0 24 24"><use href="#tt-path" fill="#25F4EE" transform="translate(1.1 1.6) scale(0.86)" /><use href="#tt-path" fill="#FE2C55" transform="translate(2.3 2.6) scale(0.86)" /><use href="#tt-path" fill="currentColor" transform="translate(1.7 2.1) scale(0.86)" /></symbol>
+      <symbol id="c-ig" viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="6.5" fill="url(#ig-grad)" /><rect x="5.5" y="5.5" width="13" height="13" rx="4" fill="none" stroke="#fff" stroke-width="1.7" /><circle cx="12" cy="12" r="3.1" fill="none" stroke="#fff" stroke-width="1.7" /><circle cx="16.1" cy="7.9" r="0.95" fill="#fff" /></symbol>
+    </svg>
+
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Synthetic Talent home">
+        <span class="st" aria-hidden="true">ST</span>
+        <span>Synthetic Talent</span>
+      </a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#roster">Roster</a>
+        <a href="#results">Results</a>
+        <a href="#services">Services</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#team">Team</a>
+      </nav>
+      <a class="cta-pill" href="#roster">Meet the roster</a>
+    </header>
+
+    <main id="top">
+      <!-- The journey: the visitor's scroll plays the studio film. -->
+      <section class="journey" aria-label="Introduction">
+        <div class="stage-track">
+        <div class="stage">
+          <div
+            class="stage-media"
+            data-clip="media/film/studio.mp4"
+            data-mobile-clip="media/film/studio-mobile.mp4"
+            data-still="media/film/studio-end.jpg"
+            aria-hidden="true"
+          >
+            <picture>
+              <source
+                media="(hover: none) and (pointer: coarse), (max-width: 860px)"
+                srcset="media/film/studio-mobile-poster.jpg"
+              />
+              <img
+                class="stage-poster"
+                src="media/film/studio-poster.jpg"
+                alt=""
+                fetchpriority="high"
+              />
+            </picture>
+          </div>
+          <div class="stage-shade" aria-hidden="true"></div>
+          <nav class="rail" aria-label="Introduction chapters">
+            <button type="button" data-chapter="0" aria-current="step"><span>Launch</span></button>
+            <button type="button" data-chapter="1"><span>Signal</span></button>
+            <button type="button" data-chapter="2"><span>Screen</span></button>
+            <button type="button" data-chapter="3"><span>Roster</span></button>
+          </nav>
+        </div>
+        </div>
+
+        <div class="chapters">
+          <article class="chapter" id="launch">
+            <div class="lower-third">
+              <p class="kicker">Launching soon</p>
+              <h1 class="headline">Virtual creators, managed like real talent.</h1>
+              <p class="lt-body">
+                Synthetic Talent builds and manages AI influencers across TikTok,
+                YouTube and Instagram, and is building the tools and services to
+                run them at scale.
+              </p>
+              <a class="cta-bar" href="#roster"
+                ><span>Meet the roster</span><i aria-hidden="true">&rarr;</i></a
+              >
+            </div>
+          </article>
+          <article class="chapter" id="signal">
+            <div class="lower-third">
+              <h2>Every creator starts as a signal.</h2>
+              <p class="lt-body">
+                We design each AI persona from scratch: a look, a voice, a niche
+                and a point of view worth following.
+              </p>
+            </div>
+          </article>
+          <article class="chapter" id="screen">
+            <div class="lower-third">
+              <h2>Made for the vertical screen.</h2>
+              <p class="lt-body">
+                Short-form video for TikTok, YouTube and Instagram, planned,
+                produced and posted for every creator on the roster.
+              </p>
+              <ul class="platforms" aria-label="Where our creators post">
+                <li>TikTok</li>
+                <li>YouTube</li>
+                <li>Instagram</li>
+              </ul>
+            </div>
+          </article>
+          <article class="chapter" id="lineup">
+            <div class="lower-third">
+              <h2>A roster, run like an agency.</h2>
+              <p class="lt-body">
+                Three AI creators so far, each one labelled as AI-generated
+                wherever it appears.
+              </p>
+              <a class="cta-line" href="#results"
+                >See the results <i aria-hidden="true">&rarr;</i></a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Roster: layered frames above, caption cards below. -->
+      <section class="roster" id="roster" aria-labelledby="roster-title">
+        <div class="wrap roster-grid">
+          <header class="roster-head rise">
+            <h2 id="roster-title">Meet our<br />AI creators</h2>
+            <p class="roster-note">
+              Every creator on our roster is an AI character, labelled as
+              AI-generated here and on every platform they post to.
+            </p>
+          </header>
+
+          <article class="creator c-juno" aria-labelledby="juno-name">
+            <div class="frame-wrap rise">
+              <figure class="frame">
+                <img
+                  src="media/juno-filmroom.jpg"
+                  alt="AI-generated image of Juno Ferro, a young man with a green streak in his hair and a patchwork scarf, at a desk in a converted shipping container"
+                  width="678"
+                  height="1200"
+                  loading="lazy"
+                />
+                <span class="ai-chip">AI-generated</span>
+              </figure>
+            </div>
+            <div class="card rise">
+              <p class="ai-label">AI-generated character</p>
+              <h3 id="juno-name">Juno Ferro</h3>
+              <p class="niche"><svg aria-hidden="true"><use href="#o-tag" /></svg>Football</p>
+              <p class="persona">
+                A British football pundit in his mid-twenties who films from a
+                shipping-container film room. He supports no club, so there's no
+                badge to protect.
+              </p>
+              <ul class="handles" aria-label="Juno Ferro's accounts">
+                <li><svg aria-hidden="true"><use href="#o-tt" /></svg><span>TikTok</span><span class="h">@junoferro.football</span></li>
+                <li><svg aria-hidden="true"><use href="#o-ig" /></svg><span>Instagram</span><span class="h">@junoferro.football</span></li>
+                <li><svg aria-hidden="true"><use href="#o-yt" /></svg><span>YouTube</span><span class="h">junoferro.football</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="creator c-wren" aria-labelledby="wren-name">
+            <div class="frame-wrap rise">
+              <figure class="frame">
+                <video
+                  class="clip"
+                  muted
+                  loop
+                  playsinline
+                  preload="none"
+                  poster="media/wren-redcarpet.jpg"
+                  aria-label="AI-generated video of Wren Ashby on a red carpet in an emerald ballgown with a picnic table built into the skirt"
+                >
+                  <source src="media/wren-redcarpet.mp4" type="video/mp4" />
+                </video>
+                <button class="clip-toggle" type="button" hidden>
+                  <span class="clip-icon" aria-hidden="true"></span>
+                </button>
+                <span class="ai-chip">AI-generated</span>
+              </figure>
+            </div>
+            <div class="card rise">
+              <p class="ai-label">AI-generated character</p>
+              <h3 id="wren-name">Wren Ashby</h3>
+              <p class="niche"><svg aria-hidden="true"><use href="#o-tag" /></svg>Comedy &amp; fashion</p>
+              <p class="persona">
+                A glamorous British fashion icon who wears food couture with total
+                seriousness. This season's gown has a picnic table in it.
+              </p>
+              <ul class="handles" aria-label="Wren Ashby's accounts">
+                <li><svg aria-hidden="true"><use href="#o-tt" /></svg><span>TikTok</span><span class="h">@wrenashby</span></li>
+                <li><svg aria-hidden="true"><use href="#o-ig" /></svg><span>Instagram</span><span class="h">@wrenashby.relationships</span></li>
+                <li><svg aria-hidden="true"><use href="#o-yt" /></svg><span>YouTube</span><span class="h">wrenashby.relationships</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="creator c-aic" aria-labelledby="aic-name">
+            <div class="frame-wrap rise">
+              <figure class="frame">
+                <img
+                  src="media/aic-filaments.jpg"
+                  alt="AI-generated artwork for AI Cleared: fine mint-green light filaments streaming across a black background"
+                  width="900"
+                  height="506"
+                  loading="lazy"
+                />
+                <span class="frame-word" aria-hidden="true">AI Cleared</span>
+                <span class="ai-chip">AI-generated</span>
+              </figure>
+            </div>
+            <div class="card rise">
+              <p class="ai-label">AI-generated channel</p>
+              <h3 id="aic-name">AI Cleared</h3>
+              <p class="niche"><svg aria-hidden="true"><use href="#o-tag" /></svg>AI news</p>
+              <p class="persona">
+                A faceless channel covering what happened in AI today, in about
+                sixty seconds, with the source and date named in every post.
+              </p>
+              <ul class="handles" aria-label="AI Cleared's accounts">
+                <li><svg aria-hidden="true"><use href="#o-tt" /></svg><span>TikTok</span><span class="h">@aiclearedhq</span></li>
+                <li><svg aria-hidden="true"><use href="#o-ig" /></svg><span>Instagram</span><span class="h">@aiclearedhq</span></li>
+                <li><svg aria-hidden="true"><use href="#o-yt" /></svg><span>YouTube</span><span class="h">aiclearedhq</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Results: real AI Cleared figures only. -->
+      <section class="results" id="results" aria-labelledby="results-title">
+        <div class="wrap">
+          <div class="results-top rise">
+            <div class="big">
+              <p class="bar-label">AI Cleared · 16 to 30 Sep 2026</p>
+              <h2 id="results-title" class="sr-only">AI Cleared results, 16 to 30 September 2026</h2>
+              <p class="numeral">9,362</p>
+              <p class="numeral-unit">Views</p>
+            </div>
+            <dl class="stats">
+              <div><dt>Posts</dt><dd>81</dd></div>
+              <div><dt>Likes</dt><dd>58</dd></div>
+              <div><dt>Comments</dt><dd>3</dd></div>
+            </dl>
+          </div>
+
+          <div class="panels rise">
+            <div class="panel">
+              <h3 class="panel-title">By platform</h3>
+              <table class="breakdown">
+                <thead>
+                  <tr>
+                    <th scope="col">Platform</th>
+                    <th scope="col">Posts</th>
+                    <th scope="col">Views</th>
+                    <th scope="col">Likes</th>
+                    <th scope="col">Comments</th>
+                    <th scope="col">Saves</th>
+                    <th scope="col">Followers</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><svg aria-hidden="true"><use href="#c-yt" /></svg>YouTube</th>
+                    <td data-label="Posts">26</td>
+                    <td data-label="Views">4,705</td>
+                    <td data-label="Likes">35</td>
+                    <td data-label="Comments">2</td>
+                    <td data-label="Saves">0</td>
+                    <td data-label="Followers">4</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><svg aria-hidden="true"><use href="#c-tt" /></svg>TikTok</th>
+                    <td data-label="Posts">25</td>
+                    <td data-label="Views">3,970</td>
+                    <td data-label="Likes">20</td>
+                    <td data-label="Comments">1</td>
+                    <td data-label="Saves">5</td>
+                    <td data-label="Followers">1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><svg aria-hidden="true"><use href="#c-ig" /></svg>Instagram</th>
+                    <td data-label="Posts">30</td>
+                    <td data-label="Views">687</td>
+                    <td data-label="Likes">3</td>
+                    <td data-label="Comments">0</td>
+                    <td data-label="Saves">1</td>
+                    <td data-label="Followers">3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel-title">Top post on each platform</h3>
+              <ol class="top-posts">
+                <li>
+                  <a href="https://www.youtube.com/watch?v=LKBScliHRbU" target="_blank" rel="noopener noreferrer">
+                    <img src="media/posts/yt-meta-muse.jpg" alt="" width="240" height="300" loading="lazy" />
+                    <span class="tp-main">
+                      <span class="tp-plat"><svg aria-hidden="true"><use href="#c-yt" /></svg>YouTube</span>
+                      <span class="tp-title">Meta Connect: Muse personal AI agent coming to AI glasses</span>
+                      <span class="tp-date">27 Sep 2026 · 5 likes</span>
+                    </span>
+                    <span class="tp-views"><span>Views</span>882</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@aiclearedhq/video/7690292508949040417" target="_blank" rel="noopener noreferrer">
+                    <img src="media/posts/tt-clean-up.jpg" alt="" width="240" height="300" loading="lazy" />
+                    <span class="tp-main">
+                      <span class="tp-plat"><svg aria-hidden="true"><use href="#c-tt" /></svg>TikTok</span>
+                      <span class="tp-title">Erase the clutter. Keep the moment.</span>
+                      <span class="tp-date">27 Sep 2026 · 1 save</span>
+                    </span>
+                    <span class="tp-views"><span>Views</span>303</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/reel/Dd4eF7IlLpj/" target="_blank" rel="noopener noreferrer">
+                    <img src="media/posts/ig-suncatcher.jpg" alt="" width="240" height="300" loading="lazy" />
+                    <span class="tp-main">
+                      <span class="tp-plat"><svg aria-hidden="true"><use href="#c-ig" /></svg>Instagram</span>
+                      <span class="tp-title">They’re sending AI chips into space.</span>
+                      <span class="tp-date">29 Sep 2026</span>
+                    </span>
+                    <span class="tp-views"><span>Views</span>127</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <p class="results-note rise">
+            Posts published between 16 and 30 September 2026 on AI Cleared's own
+            accounts, as reported by our publishing platform. Figures last
+            updated 30 September 2026; followers as of the same date; no shares
+            were recorded. Nothing here is estimated or rounded.
           </p>
-          <ul class="platforms" aria-label="Where our creators post">
-            <li>TikTok</li>
-            <li>YouTube</li>
-            <li>Instagram</li>
-          </ul>
-        </section>
+          <p class="results-note soon rise">
+            Juno Ferro's and Wren Ashby's accounts were set up on 30 September
+            2026 and have no posts yet. Their results will appear here once they
+            do.
+          </p>
+        </div>
+      </section>
 
-        <section class="block" id="services" aria-labelledby="services-title">
-          <div class="block-head">
-            <p class="eyebrow">What we do</p>
-            <h2 id="services-title">Three ways we work with AI creators</h2>
+      <!-- Services: the open panel shows its picture; the others are slim spines. -->
+      <section class="services" id="services" aria-labelledby="services-title">
+        <div class="wrap">
+          <h2 id="services-title" class="services-head rise">Three ways we work with AI creators</h2>
+          <div class="slices rise" data-accordion>
+            <article class="slice" data-open="true">
+              <figure class="slice-media">
+                <img src="media/studio-screens.jpg" alt="AI-generated studio scene: three glass screens showing Juno Ferro, Wren Ashby and AI Cleared" width="1800" height="764" loading="lazy" />
+                <span class="ai-chip">AI-generated</span>
+              </figure>
+              <h3>
+                <button type="button" aria-expanded="true" aria-controls="slice-1">
+                  <span class="icon" style="--icon: url('media/icons/talent.png')" aria-hidden="true"></span>
+                  <span class="num" aria-hidden="true">01</span>
+                  <span class="slice-title">AI influencer management</span>
+                  <span class="spine-arrow" aria-hidden="true">&rarr;</span>
+                </button>
+              </h3>
+              <div class="slice-body" id="slice-1">
+                <p>We create and run our own roster of AI influencers: their personas, content and growth on every platform.</p>
+                <a class="cta-bar" href="#roster"><span>Meet the roster</span><i aria-hidden="true">&rarr;</i></a>
+              </div>
+            </article>
+            <article class="slice">
+              <figure class="slice-media">
+                <img src="media/film/studio-end.jpg" alt="" width="1920" height="1080" loading="lazy" />
+              </figure>
+              <h3>
+                <button type="button" aria-expanded="false" aria-controls="slice-2">
+                  <span class="icon" style="--icon: url('media/icons/content.png')" aria-hidden="true"></span>
+                  <span class="num" aria-hidden="true">02</span>
+                  <span class="slice-title">Content management</span>
+                  <span class="spine-arrow" aria-hidden="true">&rarr;</span>
+                </button>
+              </h3>
+              <div class="slice-body" id="slice-2">
+                <p>Planning, producing and posting content for brands and creators who want a steady presence without running it themselves.</p>
+              </div>
+            </article>
+            <article class="slice">
+              <figure class="slice-media">
+                <img src="media/film/studio-screen.jpg" alt="" width="1920" height="1080" loading="lazy" />
+              </figure>
+              <h3>
+                <button type="button" aria-expanded="false" aria-controls="slice-3">
+                  <span class="icon" style="--icon: url('media/icons/tool.png')" aria-hidden="true"></span>
+                  <span class="num" aria-hidden="true">03</span>
+                  <span class="slice-title">Creator management tool</span>
+                  <span class="spine-arrow" aria-hidden="true">&rarr;</span>
+                </button>
+              </h3>
+              <div class="slice-body" id="slice-3">
+                <p>One place to post to every platform, schedule content and see analytics for each AI influencer.</p>
+              </div>
+            </article>
           </div>
-          <div class="cards">
-            <article class="card">
-              <span class="tag">Management</span>
-              <h3>AI influencer management</h3>
-              <p>
-                We create and run our own roster of AI influencers: their
-                personas, content and growth on every platform.
-              </p>
-            </article>
-            <article class="card">
-              <span class="tag">Services</span>
-              <h3>Content management</h3>
-              <p>
-                Planning, producing and posting content for brands and creators
-                who want a steady presence without running it themselves.
-              </p>
-            </article>
-            <article class="card">
-              <span class="tag">Product</span>
-              <h3>Creator management tool</h3>
-              <p>
-                One place to post to every platform, schedule content and see
-                analytics for each AI influencer.
-              </p>
-            </article>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="block" id="roadmap" aria-labelledby="roadmap-title">
-          <div class="block-head">
-            <p class="eyebrow">Roadmap</p>
+      <!-- Roadmap: studio plate, glowing line. -->
+      <section class="scene roadmap" id="roadmap" aria-labelledby="roadmap-title">
+        <img class="scene-bg" src="media/studio-roadmap.jpg" alt="" width="1920" height="1072" loading="lazy" />
+        <div class="wrap roadmap-grid">
+          <div class="roadmap-head rise">
+            <p class="bar-label">Our roadmap</p>
             <h2 id="roadmap-title">Where we're heading</h2>
           </div>
-          <ol class="road">
+          <ol class="road rise">
             <li class="now">
               <span class="when">Now</span>
-              <div>
-                <h3>Run a small roster of AI influencers</h3>
-                <p>
-                  Launch and grow a handful of AI creators on TikTok, YouTube
-                  and Instagram, and learn what works.
-                </p>
-              </div>
+              <h3>Run a small roster of AI influencers</h3>
+              <p>Launch and grow a handful of AI creators on TikTok, YouTube and Instagram, and learn what works.</p>
             </li>
             <li>
               <span class="when">Next</span>
-              <div>
-                <h3>Management tool and content services</h3>
-                <p>
-                  Turn our own workflow into a tool for posting and analytics,
-                  and offer content management to others.
-                </p>
-              </div>
+              <h3>Management tool and content services</h3>
+              <p>Turn our own workflow into a tool for posting and analytics, and offer content management to others.</p>
             </li>
             <li>
               <span class="when">Then</span>
-              <div>
-                <h3>AI influencer M&amp;A</h3>
-                <p>
-                  Acquire established AI influencer accounts, grow them, and
-                  help owners buy and sell them.
-                </p>
-              </div>
+              <h3>AI influencer M&amp;A</h3>
+              <p>Acquire established AI influencer accounts, grow them, and help owners buy and sell them.</p>
             </li>
             <li>
               <span class="when">Long term</span>
-              <div>
-                <h3>Research into long-form AI content</h3>
-                <p>
-                  Research and development into generating long-form content,
-                  such as full episodes and series, with AI models.
-                </p>
-              </div>
+              <h3>Research into long-form AI content</h3>
+              <p>Research and development into generating long-form content, such as full episodes and series, with AI models.</p>
             </li>
           </ol>
-        </section>
+        </div>
+      </section>
 
-        <section class="block" id="team" aria-labelledby="team-title">
-          <div class="block-head">
-            <p class="eyebrow">Team</p>
-            <h2 id="team-title">The people behind the creators</h2>
-          </div>
-          <ul class="people">
+      <!-- Team: studio plate, two cards. Legal text follows on the same stage. -->
+      <section class="scene team" id="team" aria-labelledby="team-title">
+        <img class="scene-bg" src="media/studio-team.jpg" alt="" width="1920" height="1072" loading="lazy" />
+        <div class="wrap">
+          <h2 id="team-title" class="team-head rise">The people behind the creators.</h2>
+          <ul class="people rise">
             <li class="person">
               <span class="avatar" aria-hidden="true">VB</span>
-              <div>
+              <div class="who">
                 <h3>Victor Boateng</h3>
                 <p class="role">Founder</p>
               </div>
             </li>
             <li class="person open">
-              <span class="avatar" aria-hidden="true">+</span>
-              <div>
+              <span class="avatar dashed" aria-hidden="true">+</span>
+              <div class="who center">
                 <h3>More to come</h3>
                 <p class="role">The team is growing</p>
               </div>
             </li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section class="legal" id="privacy" aria-labelledby="privacy-title">
-          <h2 id="privacy-title">Privacy policy</h2>
-          <p class="updated">Last updated 26 September 2026</p>
-          <p>
-            This website does not use cookies, analytics or sign-up forms, and
-            it does not collect personal information from visitors.
-          </p>
-          <p>
-            Synthetic Talent connects to TikTok, YouTube and Instagram only for
-            accounts it owns or manages, so it can publish content and read
-            results for those accounts. We use that information only to run
-            those accounts. We do not sell it or share it with anyone else, and
-            we delete it when an account is disconnected.
-          </p>
-          <p>Contact details will be added here before launch.</p>
-        </section>
+      <div class="legal-band">
+        <div class="wrap legal-wrap">
+          <section class="legal" id="privacy" aria-labelledby="privacy-title">
+            <h2 id="privacy-title">Privacy policy</h2>
+            <p class="updated">Last updated 26 September 2026</p>
+            <p>
+              This website does not use cookies, analytics or sign-up forms, and
+              it does not collect personal information from visitors.
+            </p>
+            <p>
+              Synthetic Talent connects to TikTok, YouTube and Instagram only for
+              accounts it owns or manages, so it can publish content and read
+              results for those accounts. We use that information only to run
+              those accounts. We do not sell it or share it with anyone else, and
+              we delete it when an account is disconnected.
+            </p>
+            <p>Contact details will be added here before launch.</p>
+          </section>
 
-        <section class="legal" id="terms" aria-labelledby="terms-title">
-          <h2 id="terms-title">Terms of use</h2>
-          <p class="updated">Last updated 26 September 2026</p>
-          <p>
-            This site describes Synthetic Talent and its plans. The information
-            here may change without notice and is provided as it is.
-          </p>
-          <p>
-            Content published by Synthetic Talent creators is made with AI and
-            follows the rules of each platform it appears on, including their
-            rules for labelling AI-generated content.
-          </p>
-        </section>
-      </main>
+          <section class="legal" id="terms" aria-labelledby="terms-title">
+            <h2 id="terms-title">Terms of use</h2>
+            <p class="updated">Last updated 26 September 2026</p>
+            <p>
+              This site describes Synthetic Talent and its plans. The information
+              here may change without notice and is provided as it is.
+            </p>
+            <p>
+              Content published by Synthetic Talent creators is made with AI and
+              follows the rules of each platform it appears on, including their
+              rules for labelling AI-generated content.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
 
-      <footer class="foot">
-        <span>&copy; <span id="year">2026</span> Synthetic Talent</span>
+    <footer class="foot">
+      <div class="wrap foot-inner">
+        <a class="brand" href="#top" aria-label="Synthetic Talent home">
+          <span class="st" aria-hidden="true">ST</span>
+          <span>Synthetic Talent</span>
+        </a>
         <nav aria-label="Legal">
           <a href="#privacy">Privacy</a>
           <a href="#terms">Terms</a>
+          <span class="copy">&copy; <span id="year">2026</span></span>
         </nav>
-      </footer>
-    </div>
+      </div>
+    </footer>
+
     <script type="module" src="./src/main.ts"></script>
   </body>
 </html>
