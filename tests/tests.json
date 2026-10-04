@@ -22,14 +22,15 @@
     "covers": [
       "scroll film",
       "introduction chapters",
-      "chapter rail"
+      "chapter rail",
+      "results hand-off"
     ],
     "description": "Verifies the introduction shows its four chapters over the studio film as the page scrolls.",
     "steps": [
       "Open the home page",
       "Scroll down slowly through the introduction"
     ],
-    "expected": "The introduction shows, in order, 'Virtual creators, managed like real talent.', 'Every creator starts as a signal.', 'Made for the vertical screen.' and 'A roster, run like an agency.', each in a dark caption box with a green bar on its left, over a dark studio image with green light. The page then continues to the Results section."
+    "expected": "The introduction shows, in order, 'Virtual creators, managed like real talent.', 'Every creator starts as a signal.', 'Made for the vertical screen.' and 'A roster, run like an agency.', each in a dark caption box with a green bar on its left, over a dark studio image with green light. After the last caption scrolls away, the white Results panel (27,746 views) slides in from the right over the film while the film pans left; scrolling on continues down into the By creator table."
   },
   {
     "name": "Roster shows each AI creator labelled as AI-generated",

@@ -108,6 +108,24 @@
             <button type="button" data-chapter="2"><span>Screen</span></button>
             <button type="button" data-chapter="3"><span>Roster</span></button>
           </nav>
+          <!-- Results slide in from the side once the film has played. -->
+          <div class="handoff-panel" role="region" aria-labelledby="results-title">
+            <div class="wrap">
+              <div class="results-top">
+                <div class="big">
+                  <p class="bar-label">All creators · 16 Sep to 4 Oct 2026</p>
+                  <h2 id="results-title" class="sr-only">Results across all three creators, 16 September to 4 October 2026</h2>
+                  <p class="numeral">27,746</p>
+                  <p class="numeral-unit">Views</p>
+                </div>
+                <dl class="stats">
+                  <div><dt>Posts</dt><dd>143</dd></div>
+                  <div><dt>Likes</dt><dd>223</dd></div>
+                  <div><dt>Comments</dt><dd>7</dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
         </div>
         </div>
 
@@ -161,26 +179,15 @@
               >
             </div>
           </article>
+          <div class="handoff" data-nav="results" aria-hidden="true">
+            <span class="handoff-anchor" id="results"></span>
+          </div>
         </div>
       </section>
 
       <!-- Results: real figures for the whole roster, from our publishing platform. -->
-      <section class="results" id="results" aria-labelledby="results-title">
+      <section class="results" data-nav="results" aria-labelledby="results-title">
         <div class="wrap">
-          <div class="results-top rise">
-            <div class="big">
-              <p class="bar-label">All creators · 16 Sep to 4 Oct 2026</p>
-              <h2 id="results-title" class="sr-only">Results across all three creators, 16 September to 4 October 2026</h2>
-              <p class="numeral">27,746</p>
-              <p class="numeral-unit">Views</p>
-            </div>
-            <dl class="stats">
-              <div><dt>Posts</dt><dd>143</dd></div>
-              <div><dt>Likes</dt><dd>223</dd></div>
-              <div><dt>Comments</dt><dd>7</dd></div>
-            </dl>
-          </div>
-
           <div class="panels rise">
             <div class="panel">
               <h3 class="panel-title">By creator</h3>

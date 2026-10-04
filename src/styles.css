@@ -328,6 +328,67 @@ button:focus-visible {
   min-height: 110dvh;
 }
 
+/* Hand-off: once the film has played, the Results panel slides in from
+   the right over it while the film pans left. --slide runs 0 to 1. */
+
+.stage-media {
+  transform: translateX(calc(var(--slide, 0) * -28%));
+}
+
+.handoff-panel {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  padding-top: 58px;
+  background: var(--bg);
+  color: var(--ink);
+  box-shadow: -48px 0 90px rgba(0, 0, 0, 0.45);
+  transform: translateX(calc((1 - var(--slide, 0)) * 101%));
+  will-change: transform;
+}
+
+.journey:not([data-slide='on'], [data-slide='done']) .handoff-panel {
+  visibility: hidden;
+}
+
+/* Landed: drop the film behind the panel so no edge of it shows. */
+.journey[data-slide='done'] .stage {
+  background: var(--bg);
+}
+
+.journey[data-slide='done'] .stage-media,
+.journey[data-slide='done'] .stage-shade,
+.journey[data-slide='done'] .rail {
+  visibility: hidden;
+}
+
+.journey[data-slide='done'] .handoff-panel {
+  box-shadow: none;
+}
+
+.handoff-panel .wrap {
+  width: 100%;
+}
+
+.handoff {
+  position: relative;
+  height: 200dvh;
+  pointer-events: none;
+}
+
+/* Where the Results link lands: the end of the slide. Lenis scrolls to
+   72px above it; native scrolling uses scroll-padding-top. */
+.handoff-anchor {
+  position: absolute;
+  left: 0;
+  top: calc(100dvh + 72px);
+  width: 1px;
+  height: 1px;
+  scroll-margin-top: -4px;
+}
+
 /* The AI Cleared lower third: dark box, mint bar on the left. */
 
 .lower-third {
@@ -803,7 +864,10 @@ button:focus-visible {
 
 .results {
   position: relative;
-  padding-top: clamp(110px, 11vw, 170px);
+}
+
+.results .panels {
+  margin-top: 0;
 }
 
 .results-top {
@@ -1674,6 +1738,14 @@ button:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  /* No slide or pan: the Results panel fades in over the still. */
+  .stage-media {
+    transform: none;
+  }
+  .handoff-panel {
+    opacity: var(--slide, 0);
+    transform: none;
+  }
   *,
   *::before,
   *::after {
@@ -1735,6 +1807,12 @@ button:focus-visible {
 @media (max-width: 680px) {
   html {
     scroll-padding-top: 128px;
+  }
+  .handoff-anchor {
+    scroll-margin-top: -56px;
+  }
+  .handoff-panel {
+    padding-top: 112px;
   }
   .topbar {
     padding-bottom: 10px;

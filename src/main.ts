@@ -49,6 +49,8 @@ const journey = document.querySelector<HTMLElement>('.journey');
 const media = document.querySelector<HTMLElement>('.stage-media');
 const railButtons = [...document.querySelectorAll<HTMLButtonElement>('.rail button')];
 const chapters = [...document.querySelectorAll<HTMLElement>('.chapter')];
+// After the last chapter, the film holds while Results slide in from the side.
+const handoff = document.querySelector<HTMLElement>('.handoff');
 
 if (journey && media) {
   let start = 0;
@@ -60,10 +62,30 @@ if (journey && media) {
   let ready = false;
   let inView = true;
   let frame = 0;
+  let slideStart = Infinity;
+  let slideLength = 1;
+  let slide = -1;
 
   const layout = () => {
     start = journey.getBoundingClientRect().top + window.scrollY;
-    total = Math.max(journey.offsetHeight - window.innerHeight, 1);
+    if (handoff) {
+      // The film finishes as the hand-off begins; the rest is the slide.
+      slideStart = handoff.getBoundingClientRect().top + window.scrollY;
+      slideLength = Math.max(handoff.offsetHeight - window.innerHeight, 1);
+      total = Math.max(slideStart - start, 1);
+    } else {
+      total = Math.max(journey.offsetHeight - window.innerHeight, 1);
+    }
+  };
+
+  const setSlide = (p: number) => {
+    // Smoothstep, rounded so the style only changes when it visibly moves.
+    let eased = Math.round(p * p * (3 - 2 * p) * 1000) / 1000;
+    if (eased > 0.995) eased = 1;
+    if (eased === slide) return;
+    slide = eased;
+    journey.style.setProperty('--slide', String(eased));
+    journey.dataset.slide = eased === 1 ? 'done' : eased > 0 ? 'on' : 'off';
   };
 
   const setActive = (index: number) => {
@@ -77,6 +99,7 @@ if (journey && media) {
   const readScroll = () => {
     const y = window.scrollY - start;
     target = clamp(y / total);
+    setSlide(clamp((window.scrollY - slideStart) / slideLength));
     const mid = window.scrollY + window.innerHeight * 0.6;
     let idx = 0;
     chapters.forEach((c, i) => {
@@ -270,7 +293,8 @@ document.querySelectorAll<HTMLAnchorElement>('.nav a').forEach((a) => {
 const spy = new IntersectionObserver(
   (entries) => {
     for (const entry of entries) {
-      const link = links.get(entry.target.id);
+      const target = entry.target as HTMLElement;
+      const link = links.get(target.dataset.nav ?? target.id);
       if (link && entry.isIntersecting) {
         links.forEach((l) => l.removeAttribute('aria-current'));
         link.setAttribute('aria-current', 'true');
@@ -280,6 +304,8 @@ const spy = new IntersectionObserver(
   { rootMargin: '-45% 0px -50% 0px' },
 );
 links.forEach((_, id) => {
-  const section = document.getElementById(id);
-  if (section) spy.observe(section);
+  // A section can also answer for a link via data-nav (Results spans the
+  // hand-off and the section after it).
+  const sections = document.querySelectorAll<HTMLElement>(`#${id}, [data-nav="${id}"]`);
+  sections.forEach((section) => spy.observe(section));
 });
