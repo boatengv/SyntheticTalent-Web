@@ -1,4 +1,7 @@
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
+
+const page = (file: string) => fileURLToPath(new URL(file, import.meta.url));
 
 export default defineConfig({
   base: './',
@@ -8,6 +11,10 @@ export default defineConfig({
       process.env.APPDEPLOY_VITE_SOURCEMAP === 'hidden' ? 'hidden' : false,
     rollupOptions: {
       maxParallelFileOps: 128,
+      input: {
+        main: page('./index.html'),
+        about: page('./about.html'),
+      },
     },
   },
 });

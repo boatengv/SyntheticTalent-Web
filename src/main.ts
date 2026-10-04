@@ -264,7 +264,8 @@ if (clip && toggle) {
 // ---------------------------------------------------------------------------
 const links = new Map<string, HTMLAnchorElement>();
 document.querySelectorAll<HTMLAnchorElement>('.nav a').forEach((a) => {
-  links.set(a.hash.slice(1), a);
+  // Only in-page section links; About Us is its own page.
+  if (a.hash && a.pathname === location.pathname) links.set(a.hash.slice(1), a);
 });
 const spy = new IntersectionObserver(
   (entries) => {

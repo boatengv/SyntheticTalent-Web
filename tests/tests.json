@@ -29,7 +29,7 @@
       "Open the home page",
       "Scroll down slowly through the introduction"
     ],
-    "expected": "The introduction shows, in order, 'Virtual creators, managed like real talent.', 'Every creator starts as a signal.', 'Made for the vertical screen.' and 'A roster, run like an agency.', each in a dark caption box with a green bar on its left, over a dark studio image with green light. The page then continues to the Roster section."
+    "expected": "The introduction shows, in order, 'Virtual creators, managed like real talent.', 'Every creator starts as a signal.', 'Made for the vertical screen.' and 'A roster, run like an agency.', each in a dark caption box with a green bar on its left, over a dark studio image with green light. The page then continues to the Results section."
   },
   {
     "name": "Roster shows each AI creator labelled as AI-generated",
@@ -39,20 +39,20 @@
       "roster section",
       "AI-generated labels"
     ],
-    "description": "Verifies the Roster link reaches the influencer showcase and that every creator is clearly labelled as AI-generated.",
+    "description": "Verifies the Meet the roster link reaches the influencer showcase and that every creator is clearly labelled as AI-generated.",
     "steps": [
       "Open the home page",
-      "Click Roster in the header"
+      "Click Meet the roster in the header"
     ],
     "expected": "The Roster section shows three creator cards: Juno Ferro (Football), Wren Ashby (Comedy & fashion) and AI Cleared (AI news). Each card shows its image or video with an 'AI-generated' label, its TikTok, Instagram and YouTube handles, and an 'AI-generated character' or 'AI-generated channel' badge. The section note says every creator is an AI character."
   },
   {
-    "name": "Results show AI Cleared's real figures with the time period",
+    "name": "Results show the roster's real figures with the time period",
     "viewport": "desktop",
     "covers": [
       "header navigation",
       "results section",
-      "platform breakdown",
+      "creator breakdown",
       "top posts"
     ],
     "description": "Verifies the Results link reaches the results section and that the figures and date range are shown.",
@@ -60,7 +60,7 @@
       "Open the home page",
       "Click Results in the header"
     ],
-    "expected": "The Results section states the period 16 to 30 September 2026 and shows 9,362 views, 81 posts, 58 likes and 3 comments. The platform table lists YouTube, TikTok and Instagram with their posts, views and followers, and the Top post on each platform list shows one linked post each for YouTube, TikTok and Instagram, with its thumbnail and view count. A note says Juno Ferro's and Wren Ashby's accounts have no posts yet."
+    "expected": "The Results section comes straight after the introduction, before the roster. It states the period 16 Sep to 4 Oct 2026 and shows 27,746 views, 143 posts, 223 likes and 7 comments. The By creator table lists AI Cleared, Juno Ferro and Wren Ashby with their posts, views, likes, comments, shares, saves and followers, and the Top post from each creator list shows one linked post for each of them, with its thumbnail and view count."
   },
   {
     "name": "Navigation and footer links reach the team, privacy and terms",
@@ -92,8 +92,23 @@
     "description": "Verifies the layout stacks on a small screen without sideways scrolling.",
     "steps": [
       "Open the home page",
-      "Scroll through the Roster, Results, Services and Roadmap sections"
+      "Scroll through the Results, Roster, Services and Roadmap sections"
     ],
-    "expected": "The introduction chapters are readable over the studio image, the creator cards and service panels are stacked in one column, the results figures and platform breakdown are readable without a wide table, the roadmap stages are readable, and the page has no horizontal scroll."
+    "expected": "The introduction chapters are readable over the studio image, the creator cards and service panels are stacked in one column, the results figures and creator breakdown are readable without a wide table, the roadmap stages are readable, and the page has no horizontal scroll."
+  },
+  {
+    "name": "About Us page explains the company",
+    "viewport": "desktop",
+    "covers": [
+      "header navigation",
+      "about page"
+    ],
+    "description": "Verifies About Us opens its own page with the company story and links back to the home page.",
+    "steps": [
+      "Open the home page",
+      "Click About Us in the header",
+      "Click Meet the roster at the bottom of the page"
+    ],
+    "expected": "The About Us page shows 'We build AI creators and run them like real talent.', the What we do, How we work and Where we're heading sections, three principles (Always labelled as AI, Platform rules first, Real numbers only) and Victor Boateng as Founder. About Us is highlighted in the header. Meet the roster returns to the home page's roster section."
   }
 ]
