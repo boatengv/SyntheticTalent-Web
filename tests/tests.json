@@ -30,7 +30,7 @@
       "Open the home page",
       "Scroll down slowly through the introduction"
     ],
-    "expected": "The introduction shows, in order, 'Virtual creators, managed like real talent.', 'Every creator starts as a signal.', 'Made for the vertical screen.' and 'A roster, run like an agency.', each in a dark caption box with a green bar on its left, over a dark studio image with green light. After the last caption scrolls away, the white Results panel (45,862 views) slides in from the right over the film while the film pans left; scrolling on continues down into the By creator table."
+    "expected": "The introduction shows, in order, 'Virtual creators, managed like real talent.', 'Every creator starts as a signal.', 'Made for the vertical screen.' and 'A roster, run like an agency.', each in a dark caption box with a green bar on its left, over a dark studio image with green light. After the last caption scrolls away, the white Results panel (60,771 views) slides in from the right over the film while the film pans left; scrolling on continues down into the By creator table."
   },
   {
     "name": "Roster shows each AI creator labelled as AI-generated",
@@ -45,7 +45,7 @@
       "Open the home page",
       "Click Meet the roster in the header"
     ],
-    "expected": "The Roster section shows three creator cards: Juno Ferro (Football), Wren Ashby (Comedy & fashion) and AI Cleared (AI news). Each card shows its image or video with an 'AI-generated' label, its TikTok, Instagram and YouTube handles, and an 'AI-generated character' or 'AI-generated channel' badge. The section note says every creator is an AI character."
+    "expected": "The Roster section shows four creator cards: Juno Ferro (Football), Wren Ashby (Comedy & fashion), AI Cleared (AI news) and Animotion Wild (Wildlife). Each card shows its image or video with an 'AI-generated' label, its platform handles (Animotion Wild is on Facebook only; AI Cleared also lists Facebook), and an 'AI-generated character' or 'AI-generated channel' badge. The section note says every creator is an AI character."
   },
   {
     "name": "Results show the roster's real figures with the time period",
@@ -61,7 +61,7 @@
       "Open the home page",
       "Click Results in the header"
     ],
-    "expected": "The Results section comes straight after the introduction, before the roster. It states the period 16 Sep to 5 Oct 2026 and shows 45,862 views, 152 posts, 392 likes and 14 comments. The By creator table lists AI Cleared, Juno Ferro and Wren Ashby with their posts, views, likes, comments, shares, saves and followers, and the Top post from each creator list shows one linked post for each of them, with its thumbnail and view count."
+    "expected": "The Results section comes straight after the introduction, before the roster. It states 'All creators · all posts to 5 Oct 2026' and shows 60,771 views, 353 posts, 1,577 likes and 146 comments. The By creator table lists AI Cleared, Juno Ferro and Wren Ashby with their posts, views, likes, comments, shares, saves and followers, then Animotion Wild marked 'Posted 16 Feb to 19 Apr 2026'. The Top post from each creator list shows one linked post for each of the four, with its thumbnail and view count."
   },
   {
     "name": "Navigation and footer links reach the team, privacy and terms",
