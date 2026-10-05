@@ -111,21 +111,19 @@
             <button type="button" data-chapter="2"><span>Screen</span></button>
             <button type="button" data-chapter="3"><span>Roster</span></button>
           </nav>
-          <!-- Results slide in from the side once the film has played. -->
-          <div class="handoff-panel" role="region" aria-labelledby="results-title">
-            <div class="wrap">
-              <div class="results-top">
-                <div class="big">
-                  <p class="bar-label">All creators · all posts to 5 Oct 2026</p>
-                  <h2 id="results-title" class="sr-only">Results across all four creators, every post up to 5 October 2026</h2>
-                  <p class="numeral">60,771</p>
-                  <p class="numeral-unit">Views</p>
-                </div>
-                <dl class="stats">
-                  <div><dt>Posts</dt><dd>353</dd></div>
-                  <div><dt>Likes</dt><dd>1,577</dd></div>
-                  <div><dt>Comments</dt><dd>146</dd></div>
-                </dl>
+          <!-- Brand Market slides in from the side once the film has played. -->
+          <div class="handoff-panel" role="region" aria-labelledby="bm-title">
+            <div class="wrap bm-teaser">
+              <p class="bar-label">Brand Market</p>
+              <h2 id="bm-title">Buy the brand behind the page.</h2>
+              <p class="bm-lede">
+                A marketplace for social media brands: the identity, content
+                library, audience plan, email list and domain, protected by
+                escrow. No account logins change hands.
+              </p>
+              <div class="bm-actions">
+                <a class="cta-bar" href="market.html#/browse"><span>Browse brands</span><i aria-hidden="true">&rarr;</i></a>
+                <a class="cta-bar ghost" href="market.html#/sell"><span>Sell your brand</span><i aria-hidden="true">&rarr;</i></a>
               </div>
             </div>
           </div>
@@ -183,15 +181,27 @@
               >
             </div>
           </article>
-          <div class="handoff" data-nav="results" aria-hidden="true">
-            <span class="handoff-anchor" id="results"></span>
-          </div>
+          <div class="handoff" aria-hidden="true"></div>
         </div>
       </section>
 
       <!-- Results: real figures for the whole roster, from our publishing platform. -->
-      <section class="results" data-nav="results" aria-labelledby="results-title">
+      <section class="results" id="results" aria-labelledby="results-title">
         <div class="wrap">
+          <div class="results-top rise">
+            <div class="big">
+              <p class="bar-label">All creators · all posts to 5 Oct 2026</p>
+              <h2 id="results-title" class="sr-only">Results across all four creators, every post up to 5 October 2026</h2>
+              <p class="numeral">60,771</p>
+              <p class="numeral-unit">Views</p>
+            </div>
+            <dl class="stats">
+              <div><dt>Posts</dt><dd>353</dd></div>
+              <div><dt>Likes</dt><dd>1,577</dd></div>
+              <div><dt>Comments</dt><dd>146</dd></div>
+            </dl>
+          </div>
+
           <div class="panels rise">
             <div class="panel">
               <h3 class="panel-title">By creator</h3>
@@ -450,6 +460,7 @@
                 <li><svg aria-hidden="true"><use href="#o-fb" /></svg><span>Facebook</span><span class="h">Animotion Wild</span></li>
               </ul>
             </div>
+          </article>
         </div>
       </section>
 

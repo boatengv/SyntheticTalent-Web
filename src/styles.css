@@ -328,8 +328,8 @@ button:focus-visible {
   min-height: 110dvh;
 }
 
-/* Hand-off: once the film has played, the Results panel slides in from
-   the right over it while the film pans left. --slide runs 0 to 1. */
+/* Hand-off: once the film has played, the Brand Market panel slides in
+   from the right over it while the film pans left. --slide runs 0 to 1. */
 
 .stage-media {
   transform: translateX(calc(var(--slide, 0) * -28%));
@@ -378,15 +378,47 @@ button:focus-visible {
   pointer-events: none;
 }
 
-/* Where the Results link lands: the end of the slide. Lenis scrolls to
-   72px above it; native scrolling uses scroll-padding-top. */
-.handoff-anchor {
-  position: absolute;
-  left: 0;
-  top: calc(100dvh + 72px);
-  width: 1px;
-  height: 1px;
-  scroll-margin-top: -4px;
+/* The captions layer sits over the stage; only the captions take clicks,
+   so the Brand Market buttons underneath stay reachable. */
+.chapters {
+  pointer-events: none;
+}
+
+.lower-third {
+  pointer-events: auto;
+}
+
+.bm-teaser h2 {
+  max-width: 14ch;
+  margin-top: 26px;
+  font-weight: 700;
+  font-size: clamp(44px, 6.4vw, 96px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.bm-lede {
+  margin: 24px 0 0;
+  max-width: 52ch;
+  color: var(--muted);
+  font-size: clamp(16px, 1.4vw, 19px);
+}
+
+.bm-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.bm-actions .cta-bar {
+  margin-top: 0;
+}
+
+.cta-bar.ghost {
+  border-color: var(--line);
+  background: var(--bg);
+  color: var(--ink);
 }
 
 /* The AI Cleared lower third: dark box, mint bar on the left. */
@@ -900,10 +932,7 @@ button:focus-visible {
 
 .results {
   position: relative;
-}
-
-.results .panels {
-  margin-top: 0;
+  padding-top: clamp(110px, 11vw, 170px);
 }
 
 .results-top {
@@ -1853,9 +1882,6 @@ button:focus-visible {
 @media (max-width: 680px) {
   html {
     scroll-padding-top: 128px;
-  }
-  .handoff-anchor {
-    scroll-margin-top: -56px;
   }
   .handoff-panel {
     padding-top: 112px;

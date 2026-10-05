@@ -23,14 +23,14 @@
       "scroll film",
       "introduction chapters",
       "chapter rail",
-      "results hand-off"
+      "brand market hand-off"
     ],
     "description": "Verifies the introduction shows its four chapters over the studio film as the page scrolls.",
     "steps": [
       "Open the home page",
       "Scroll down slowly through the introduction"
     ],
-    "expected": "The introduction shows, in order, 'Virtual creators, managed like real talent.', 'Every creator starts as a signal.', 'Made for the vertical screen.' and 'A roster, run like an agency.', each in a dark caption box with a green bar on its left, over a dark studio image with green light. After the last caption scrolls away, the white Results panel (60,771 views) slides in from the right over the film while the film pans left; scrolling on continues down into the By creator table."
+    "expected": "The introduction shows, in order, 'Virtual creators, managed like real talent.', 'Every creator starts as a signal.', 'Made for the vertical screen.' and 'A roster, run like an agency.', each in a dark caption box with a green bar on its left, over a dark studio image with green light. After the last caption scrolls away, a white Brand Market panel ('Buy the brand behind the page.', with Browse brands and Sell your brand buttons) slides in from the right over the film while the film pans left; scrolling on continues down into the Results section."
   },
   {
     "name": "Roster shows each AI creator labelled as AI-generated",
@@ -61,7 +61,7 @@
       "Open the home page",
       "Click Results in the header"
     ],
-    "expected": "The Results section comes straight after the introduction, before the roster. It states 'All creators · all posts to 5 Oct 2026' and shows 60,771 views, 353 posts, 1,577 likes and 146 comments. The By creator table lists AI Cleared, Juno Ferro and Wren Ashby with their posts, views, likes, comments, shares, saves and followers, then Animotion Wild marked 'Posted 16 Feb to 19 Apr 2026'. The Top post from each creator list shows one linked post for each of the four, with its thumbnail and view count."
+    "expected": "The Results section comes straight after the introduction and its Brand Market panel, before the roster. It states 'All creators · all posts to 5 Oct 2026' and shows 60,771 views, 353 posts, 1,577 likes and 146 comments. The By creator table lists AI Cleared, Juno Ferro and Wren Ashby with their posts, views, likes, comments, shares, saves and followers, then Animotion Wild marked 'Posted 16 Feb to 19 Apr 2026'. The Top post from each creator list shows one linked post for each of the four, with its thumbnail and view count."
   },
   {
     "name": "Navigation and footer links reach the team, privacy and terms",
