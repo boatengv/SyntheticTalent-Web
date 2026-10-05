@@ -880,7 +880,7 @@ button:focus-visible {
 .numeral {
   margin: 22px 0 0;
   color: var(--accent-ink);
-  font: 600 clamp(92px, 12.5vw, 190px) / 0.92 var(--mono);
+  font: 600 clamp(80px, 11vw, 172px) / 0.92 var(--mono);
   letter-spacing: -0.04em;
   font-variant-numeric: tabular-nums;
 }
