@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Brand Market · Synthetic Talent</title>
+    <meta
+      name="description"
+      content="Buy and sell the brand behind a social media page: content library, audience, brand kit, domain and email list, protected by escrow."
+    />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Brand Market · Synthetic Talent" />
+    <meta
+      property="og:description"
+      content="A marketplace for the brand behind the page."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%2334D399'/%3E%3Crect x='4.5' y='5' width='2.2' height='14' rx='1.1' fill='%230F0F12'/%3E%3Crect x='9' y='5' width='10' height='14' rx='2.4' fill='none' stroke='%230F0F12' stroke-width='2'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="stylesheet" href="./src/market.css" />
+  </head>
+  <body class="mk">
+    <a class="skip" href="#app">Skip to content</a>
+
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Synthetic Talent home">
+        <span class="st" aria-hidden="true">ST</span>
+        <span>Synthetic Talent</span>
+      </a>
+      <nav class="nav" aria-label="Marketplace" id="mkNav">
+        <a href="#/browse" data-route="browse">Browse</a>
+        <a href="#/sell" data-route="sell">Sell a brand</a>
+        <a href="#/how" data-route="how">How it works</a>
+        <a href="#/trust" data-route="trust">Trust &amp; safety</a>
+        <a href="#/faq" data-route="faq">FAQ</a>
+        <a href="#/deals" data-route="deals">My deals <span class="mk-count" id="dealCount" hidden>0</span></a>
+        <a href="./">Main site</a>
+      </nav>
+    </header>
+
+    <main id="app" tabindex="-1"></main>
+
+    <footer class="foot dark">
+      <div class="wrap foot-inner">
+        <a class="brand" href="./" aria-label="Synthetic Talent home">
+          <span class="st" aria-hidden="true">ST</span>
+          <span>Synthetic Talent</span>
+        </a>
+        <nav aria-label="Legal">
+          <a href="#/trust">Trust &amp; safety</a>
+          <a href="#/faq">FAQ</a>
+          <span class="copy">&copy; <span id="year">2026</span></span>
+        </nav>
+      </div>
+      <div class="wrap mk-legal">
+        Demo build: listings are fictional and no payments or transfers take
+        place. Brand Market is not affiliated with Instagram, Meta, TikTok,
+        YouTube or X. We do not sell, transfer or broker login access to
+        accounts.
+      </div>
+    </footer>
+
+    <div class="mk-toast" id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="./src/market.ts"></script>
+  </body>
+</html>

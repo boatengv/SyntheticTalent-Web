@@ -14,6 +14,7 @@ export default defineConfig({
       input: {
         main: page('./index.html'),
         about: page('./about.html'),
+        market: page('./market.html'),
       },
     },
   },
